@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>호외! 1894 · 日淸韓戰爭實記</title>
+<meta name="description" content="TJ Kim 컬렉션 소장 『日淸韓戰爭實記』 — 1894년 일본 사람들이 전쟁 소식을 받아 보던 판화 화첩 32장. 한국어·English·日本語 영상.">
+<meta property="og:title" content="호외! 1894 · 日淸韓戰爭實記">
+<meta property="og:description" content="'실제 기록'이라는 화첩, 마지막 장은 일어나지 않은 일이었다. TJ Kim 컬렉션.">
+<meta property="og:image" content="img/thumb_kr.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap">
+<style>
+/* 레이아웃: 화첩을 펼친 순서 그대로 — 영상(입구) → 화첩 정보 → 세 가지 단서 → 32장 → 장 구성 → 자료 */
+:root {
+  --paper: #eceeea;      /* 차가운 화지 */
+  --sheet: #f7f8f5;
+  --ink: #15181e;
+  --muted: #5a606b;
+  --line: #cfd3cc;
+  --bero: #23406f;       /* 프러시안 블루(베로아이) */
+  --beni: #c4261d;       /* 아닐린 홍색 */
+  --display: "Black Han Sans", "Apple SD Gothic Neo", sans-serif;
+  --body: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --kanji: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --wrap: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --paper: #0f131b; --sheet: #161b25; --ink: #e7e5de; --muted: #9aa1ad; --line: #2a3140; --bero: #7d9fd8; --beni: #ec5b4f; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --paper: #0f131b; --sheet: #161b25; --ink: #e7e5de; --muted: #9aa1ad; --line: #2a3140; --bero: #7d9fd8; --beni: #ec5b4f; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 17px/1.75 var(--body); }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--bero); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--beni); outline-offset: 3px; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+section { padding-block: 64px; border-top: 1px solid var(--line); }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+h2 { font: 400 clamp(28px, 4vw, 40px)/1.2 var(--display); letter-spacing: .5px; }
+.kicker { font: 700 13px/1.4 var(--body); letter-spacing: .18em; color: var(--beni); text-transform: uppercase; margin-bottom: 10px; }
+.lead { max-width: 64ch; color: var(--muted); margin: 14px 0 0; }
+.kj { font-family: var(--kanji); }
+
+/* 머리 */
+header { padding-block: 56px 48px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 56px; align-items: center; }
+.hero h1 { font: 400 clamp(56px, 10vw, 120px)/1 var(--display); letter-spacing: 1px; }
+.hero h1 b { color: var(--beni); font-weight: 400; }
+.hero .sub { font: 500 clamp(20px, 2.6vw, 28px)/1.4 var(--kanji); margin-top: 14px; }
+.hero p { max-width: 58ch; margin: 22px 0 0; }
+.hero p strong { color: var(--beni); }
+.cover { margin: 0; transform: rotate(1.2deg); box-shadow: 0 18px 40px rgba(0,0,0,.28); border: 1px solid var(--line); }
+.cover img { width: 100%; }
+.cover figcaption { font-size: 13px; color: var(--muted); padding: 8px 2px 0; transform: rotate(-1.2deg); }
+
+/* 영상 — 페이지 안 플레이어: Google Drive 공유 파일을 iframe으로 */
+.stage { position: relative; aspect-ratio: 16 / 9; margin-top: 30px; background: #000; border: 1px solid var(--line); }
+.stage iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.stage-note { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 14px; color: var(--muted); margin-top: 10px; }
+.video.on { border-color: var(--beni); box-shadow: inset 0 0 0 1px var(--beni); }
+.video.on .lang::after { content: " · 재생 중"; font: 700 13px/1 var(--body); color: var(--beni); letter-spacing: .04em; }
+.videos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 22px; }
+.video { display: grid; gap: 12px; text-decoration: none; color: inherit; background: var(--sheet); border: 1px solid var(--line); padding: 12px 12px 16px; }
+.video:hover .thumb img { transform: scale(1.03); }
+.thumb { position: relative; overflow: hidden; aspect-ratio: 16 / 9; background: #000; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.thumb .play { position: absolute; right: 10px; bottom: 10px; background: var(--beni); color: #fff; font: 700 13px/1 var(--body); padding: 8px 12px; letter-spacing: .05em; }
+.video .lang { font: 400 22px/1.2 var(--display); }
+.video .meta { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+/* 화첩 정보 */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0; margin-top: 28px; border-top: 2px solid var(--ink); }
+.facts div { padding: 14px 16px 16px 0; border-bottom: 1px solid var(--line); }
+.facts dt { font-size: 13px; color: var(--muted); letter-spacing: .06em; }
+.facts dd { margin: 4px 0 0; font-weight: 500; }
+
+/* 세 가지 단서 */
+.clues { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 30px; }
+.clue { display: grid; grid-template-rows: auto 1fr; gap: 16px; }
+.clue .pic { height: 300px; display: flex; justify-content: center; align-items: flex-start; background: var(--sheet); border: 1px solid var(--line); padding: 14px; overflow: hidden; }
+.clue .pic img { height: 100%; width: auto; }
+.clue .pic.wide img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 30%; }
+.clue h3 { font: 700 30px/1.2 var(--kanji); }
+.clue h3 small { display: block; font: 700 14px/1.5 var(--body); color: var(--beni); letter-spacing: .08em; margin-bottom: 4px; }
+.clue p { margin: 8px 0 0; }
+
+/* 32장 */
+.chapter { margin-top: 44px; }
+.chapter header { padding: 0; display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; border-bottom: 2px solid var(--ink); padding-bottom: 8px; }
+.chapter header .n { font: 700 13px/1 var(--body); color: var(--beni); letter-spacing: .14em; }
+.chapter header h3 { font: 400 24px/1.3 var(--display); }
+.plates { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px; margin-top: 18px; }
+.plate { margin: 0; }
+.plate img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; border: 1px solid var(--line); background: var(--sheet); }
+.plate figcaption { display: grid; gap: 2px; padding-top: 8px; }
+.plate .no { font: 700 12px/1 var(--body); color: var(--muted); letter-spacing: .12em; font-variant-numeric: tabular-nums; }
+.plate .ttl { font: 500 15px/1.45 var(--kanji); }
+.plate .ko { font-size: 14px; color: var(--muted); line-height: 1.5; }
+.plate.mark img { outline: 3px solid var(--beni); outline-offset: -3px; }
+.plate.mark .no { color: var(--beni); }
+
+/* 장 구성 */
+.toc { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 0; border-top: 2px solid var(--ink); }
+.toc li { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.toc time { font: 600 15px/1.6 ui-monospace, Menlo, monospace; color: var(--bero); }
+.toc b { font-weight: 700; }
+.toc span { display: block; color: var(--muted); font-size: 15px; }
+
+/* 자료 */
+.sources { columns: 2 320px; column-gap: 40px; margin: 22px 0 0; padding-left: 18px; }
+.sources li { break-inside: avoid; margin-bottom: 8px; font-size: 15px; }
+footer { padding-block: 40px 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+footer b { color: var(--ink); }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { max-width: 320px; margin: 8px auto 0; }
+  .videos, .clues { grid-template-columns: minmax(0, 1fr); }
+  .clue .pic { height: 260px; }
+}
+@media (prefers-reduced-motion: reduce) { .thumb img { transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="hero">
+    <div>
+      <div class="kicker">TJ Kim Collection · APKC181121151</div>
+      <h1>호외! <b>1894</b></h1>
+      <div class="sub kj">『日淸韓戰爭實記』</div>
+      <p>1894년 청일전쟁 때 일본 사람들은 신문보다 먼저, 색색의 판화로 전쟁 소식을 받아 보았습니다. 전쟁 동안 이런 판화가 하루 10점꼴로 쏟아졌습니다. 이 화첩은 그 판화 32장을 엮은 책입니다. 제목은 '실제 기록'. 그런데 <strong>마지막 장은 일어나지 않은 일</strong>이었습니다.</p>
+    </div>
+    <figure class="cover">
+      <img src="img/cover.jpg" alt="『日淸韓戰爭實記』 표지" width="669" height="1000">
+      <figcaption>표지 · 『日淸韓戰爭實記』 全</figcaption>
+    </figure>
+  </div>
+</header>
+
+<section id="videos">
+  <div class="wrap">
+    <div class="kicker">영상</div>
+    <h2>판화 속으로 들어가는 8분</h2>
+    <p class="lead">화첩의 순서 그대로 판화 속으로 들어가, 그림이 전한 승리와 그림이 그리지 않은 사실을 함께 따라갑니다. 세 언어로 만들었고, 일본어판은 일본인의 시점으로 다시 썼습니다.</p>
+    <div class="stage" id="stage">
+      <iframe src="https://drive.google.com/file/d/15g0YASjlrMWJ2xalZCKlIpFG77QIQXCy/preview" title="한국어 영상" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+    <div class="stage-note"><span id="stage-title">한국어 · 8:37</span><a id="stage-open" href="https://drive.google.com/file/d/15g0YASjlrMWJ2xalZCKlIpFG77QIQXCy/view" target="_blank" rel="noopener">새 창에서 보기 ↗</a></div>
+    <div class="videos">
+      <a class="video on" href="https://drive.google.com/file/d/15g0YASjlrMWJ2xalZCKlIpFG77QIQXCy/view" data-drive="15g0YASjlrMWJ2xalZCKlIpFG77QIQXCy" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/thumb_kr.jpg" alt="한국어판 썸네일: 마지막 장은 가짜였다" loading="lazy"><span class="play">▶ 8:37</span></div>
+        <div class="lang">한국어</div>
+        <div class="meta">130년 전 일본의 '전쟁 속보' 화첩, 마지막 장은 가짜였다 · 티제이 김 컬렉션</div>
+      </a>
+      <a class="video" href="https://drive.google.com/file/d/1jUvTkuFt8vepGTcZVK8HWVT5WqX0rNs5/view" data-drive="1jUvTkuFt8vepGTcZVK8HWVT5WqX0rNs5" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/thumb_en.jpg" alt="English thumbnail: The last page was fake" loading="lazy"><span class="play">▶ 8:11</span></div>
+        <div class="lang">English</div>
+        <div class="meta">Japan's 1894 War-News Album: The Last Page Was Fake · TJ Kim Collection</div>
+      </a>
+      <a class="video" href="https://drive.google.com/file/d/1URYDQg2H6vF8J9nHQHaGQIy-hoOxzDvf/view" data-drive="1URYDQg2H6vF8J9nHQHaGQIy-hoOxzDvf" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/thumb_ja.jpg" alt="日本語版サムネイル：最後の一枚は嘘だった" loading="lazy"><span class="play">▶ 9:47</span></div>
+        <div class="lang">日本語</div>
+        <div class="meta">明治の「戦争速報」錦絵、最後の一枚は嘘だった · TJキム・コレクション</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="album">
+  <div class="wrap">
+    <div class="kicker">화첩</div>
+    <h2>이 책은</h2>
+    <p class="lead">일본에서 '센소에(戰爭繪)', 전쟁 판화라 불린 색판 목판 삼련화를 엮은 화첩입니다. 한 장이 세 판을 이어 붙인 가로 그림이라, 판과 판 사이에 이음선이 지나갑니다.</p>
+    <dl class="facts">
+      <div><dt>제목</dt><dd class="kj">日淸韓戰爭實記</dd></div>
+      <div><dt>뜻</dt><dd>일본·청·조선 전쟁의 실제 기록</dd></div>
+      <div><dt>형태</dt><dd>색판 목판 삼련화 32점 화첩</dd></div>
+      <div><dt>시기</dt><dd>1894~1895년 (메이지 27~28년)</dd></div>
+      <div><dt>그림</dt><dd>楊斎延一(와타나베 노부카즈) 외 · 판 4는 小国 서명</dd></div>
+      <div><dt>소장</dt><dd>TJ Kim 컬렉션 · APKC181121151</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="clues">
+  <div class="wrap">
+    <div class="kicker">세 가지 단서</div>
+    <h2>그림 구석에 남은 글자</h2>
+    <p class="lead">판화는 승리를 그렸지만, 판 위의 작은 글자들은 다른 이야기를 합니다.</p>
+    <div class="clues">
+      <article class="clue">
+        <div class="pic"><img src="img/p34_title.jpg" alt="판 34 제목 띠: 日淸未來記 北京陷落淸將降參之圖" loading="lazy"></div>
+        <div>
+          <h3><small>판 34 · 마지막 장</small>未來記</h3>
+          <p>'북경 함락, 청 장수 항복'을 그린 마지막 장의 제목 첫머리에 작게 적힌 세 글자입니다. 미래기, 앞으로 일어날 일의 기록. 북경은 함락되지 않았습니다. 판화가는 아직 오지 않은 승리를 미리 그려 팔았습니다.</p>
+        </div>
+      </article>
+      <article class="clue">
+        <div class="pic"><img src="img/p08_stamp.jpg" alt="판 8 구석의 검열 도장: 內務省檢閱濟" loading="lazy"></div>
+        <div>
+          <h3><small>판 8 · 대격전</small>內務省檢閱濟</h3>
+          <p>'내무성 검열 필'. 판 위쪽 귀퉁이의 작은 띠입니다. 사람들이 받아 본 전쟁 속보는 정부의 허락을 받은 그림이었습니다.</p>
+        </div>
+      </article>
+      <article class="clue">
+        <div class="pic wide"><img src="img/cover.jpg" alt="표지 제목의 韓 자" loading="lazy"></div>
+        <div>
+          <h3><small>표지 · 제목</small>韓</h3>
+          <p>제목에는 조선(韓)이 들어 있고, 전쟁은 경복궁에서 시작됩니다. 1895년 시모노세키 조약 제1조는 조선의 독립을 적었습니다. 그런데 32장 어디에도 조선 사람은 주인공이 아니었습니다.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="plates">
+  <div class="wrap">
+    <div class="kicker">32장</div>
+    <h2>화첩 순서대로</h2>
+    <p class="lead">영상의 장 구성에 맞춰 묶었습니다. 판 번호는 화첩의 쪽 순서이고(14와 15는 같은 판), 제목은 판화에 적힌 원문입니다.</p>
+    <div id="plate-list"></div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap">
+    <div class="kicker">장 구성</div>
+    <h2>영상의 여덟 마디</h2>
+    <p class="lead">시각은 한국어판 기준입니다.</p>
+    <ol class="toc">
+      <li><time>0:00</time><div><b>오프닝 · 마지막 장부터</b><span>호외! 북경 함락! 그런데 판 제목 첫머리에는 未來記라고 적혀 있습니다.</span></div></li>
+      <li><time>0:31</time><div><b>1장 · 전보가 그린 전쟁</b><span>'조선 전보 실기'를 그리던 날, 조선의 전신선은 끊겨 있었습니다. 그리고 경복궁의 새벽.</span></div></li>
+      <li><time>2:15</time><div><b>2장 · 첫 포성과 만들어진 영웅</b><span>고승호 격침, 이름이 바뀐 나팔수, 판 구석의 검열 도장.</span></div></li>
+      <li><time>3:49</time><div><b>3장 · 국경을 넘다</b><span>달밤의 강, 치원의 돌진, 삼련화의 이음선을 넘는 순간 조선 밖입니다.</span></div></li>
+      <li><time>4:55</time><div><b>4장 · 여순, 네 장의 그림</b><span>한 도시에만 네 장. 네 번째 판은 간호하는 그림이었습니다.</span></div></li>
+      <li><time>5:49</time><div><b>5장 · 겨울, 그리고 편지</b><span>승리 판 위로 눈이 내립니다. 위해위, 적장에게 보낸 편지.</span></div></li>
+      <li><time>7:02</time><div><b>6장 · 끝, 그리고 미래기</b><span>전쟁을 끝낸 총알 한 발, 조약 제1조, 돌려준 요동반도.</span></div></li>
+      <li><time>8:06</time><div><b>에필로그 · 다시 경복궁</b><span>같은 성문. 전쟁이 끝나고 여섯 달 뒤의 일.</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="sources">
+  <div class="wrap">
+    <div class="kicker">참고 자료</div>
+    <h2>사실의 출처</h2>
+    <p class="lead">영상 속 이야기꾼이 전하는 사실은 아래 자료를 근거로 했습니다. 판화 속 목소리 '긴타'는 그림의 말을 전하는 허구 인물입니다. 판화 이미지는 소장품 원본을 확대만 했습니다.</p>
+    <ul class="sources">
+      <li>판 34와 같은 제목의 판화 · <a href="https://www.slam.org/collection/objects/52554/" target="_blank" rel="noopener">St. Louis Art Museum</a></li>
+      <li>전쟁 판화의 규모 · <a href="https://pages.uoregon.edu/jsmacollections/home/articles/war-prints-senso-e-/sino-japanese-war-1894---1895-.html" target="_blank" rel="noopener">University of Oregon JSMA</a></li>
+      <li>와타나베 노부카즈 · <a href="https://pages.uoregon.edu/jsmacollections/home/artists/watanabe-nobukazu-1872-1944-.html" target="_blank" rel="noopener">JSMA 작가 페이지</a>, <a href="https://woodblockprints.org/index.php/Detail/entities/819" target="_blank" rel="noopener">woodblockprints.org</a></li>
+      <li>경복궁 점령 · <a href="https://www.khan.co.kr/article/201401212126215" target="_blank" rel="noopener">경향신문</a>, <a href="https://www.ajunews.com/view/20210324105701364" target="_blank" rel="noopener">아주경제</a>, <a href="https://en.wikipedia.org/wiki/Japanese_occupation_of_Gyeongbokgung" target="_blank" rel="noopener">Wikipedia</a></li>
+      <li>고승호 · <a href="https://blog.nationalarchives.gov.uk/the-first-sino-japanese-war-and-the-kowshing-incident/" target="_blank" rel="noopener">UK National Archives</a>, <a href="https://www.jacar.go.jp/english/jacarbl-fsjwar-e/main/18940725/index.html" target="_blank" rel="noopener">JACAR</a></li>
+      <li>나팔수 · <a href="https://www.metmuseum.org/art/collection/search/55320" target="_blank" rel="noopener">Met Museum</a>, <a href="https://jacar.go.jp/english/exhibition/jacarbl-fsjwar-e/smart/gallery/gallery005.html" target="_blank" rel="noopener">JACAR gallery</a></li>
+      <li>황해해전·덩스창 · <a href="https://en.wikipedia.org/wiki/Deng_Shichang" target="_blank" rel="noopener">Wikipedia</a></li>
+      <li>여순 · <a href="https://en.wikipedia.org/wiki/Port_Arthur_massacre_(China)" target="_blank" rel="noopener">Wikipedia</a>, <a href="https://history.state.gov/historicaldocuments/frus1894app1/d87" target="_blank" rel="noopener">US FRUS 1894</a></li>
+      <li>위해위·정여창 · <a href="https://en.wikipedia.org/wiki/Ding_Ruchang" target="_blank" rel="noopener">Wikipedia</a></li>
+      <li>이홍장 피격·휴전·조약 · <a href="https://www.jacar.go.jp/english/jacarbl-fsjwar-e/smart/about/p004.html" target="_blank" rel="noopener">JACAR</a>, <a href="https://taipeitimes.com/News/feat/archives/2017/04/16/2003668809" target="_blank" rel="noopener">Taipei Times</a></li>
+      <li>조선 인부 동원 · <a href="https://jjan.kr/article/20241203580279" target="_blank" rel="noopener">전북일보</a>, <a href="https://www.kyeongin.com/article/1705001" target="_blank" rel="noopener">경인일보</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><b>TJ Kim 컬렉션</b> 소장품 『日淸韓戰爭實記』 APKC181121151 · 영상 음성 Typecast, 음악 Flow Music(AI 생성) · 2026</div>
+</footer>
+
+<script>
+// 화첩 32장 (판 번호 = 쪽 순서, 14·15는 같은 판) — 영상의 장 구성으로 묶음
+const CH = [
+  ["1장", "전보가 그린 전쟁", [["02","參謀本部會議之圖","참모본부 회의"],["03","朝鮮電報實記","조선 전보 실기 · 제물포 상륙"],["04","朝鮮京城之小戰","조선 경성의 작은 싸움 · 경복궁"],["05","大鳥公使韓廷談判之圖","오토리 공사, 조선 조정과 담판"]]],
+  ["2장", "첫 포성과 만들어진 영웅", [["06","朝鮮豊島海戰日軍大勝利","풍도 해전"],["07","日淸戰爭 安城激戰實說","안성 격전 · 나팔수"],["08","朝鮮事件 日淸大激戰之圖","일청 대격전 · 검열 도장"],["09","大日本大勝利 分捕品縱覽之圖","전리품 종람"],["10","暴行淸兵ヲ斬首之圖","난폭한 청병 참수"]]],
+  ["3장", "국경을 넘다", [["11","虎山附近騎兵攻擊","호산 부근 기병 공격"],["12","九連城攻擊","구련성 공격 · 달밤"],["13","日本海軍大勝利 鴨綠江口海戰","압록강 어귀(황해) 해전"],["15","日淸合戰我軍大勝利 九連城沒落之圖","구련성 함락"],["16","鳳凰城大勝利之圖","봉황성 대승리"],["17","金州附近進擊之圖","금주 부근 진격"]]],
+  ["4장", "여순, 네 장의 그림", [["18","旅順口砲臺之圖","여순 포대"],["19","旅順口大激戰之圖","여순 대격전"],["20","旅順口砲臺攻擊之圖","여순 포대 공격"],["21","旅順口攻擊 野戰衛生隊看護之圖","야전 위생대 간호"]]],
+  ["5장", "겨울, 그리고 편지", [["22","海城攻擊之圖","해성 공격"],["23","日淸 蓋平城激戰船橋之圖","개평성 격전 · 배다리"],["24","榮城激戰の圖","영성 격전"],["25","日淸大戰爭我軍大勝利 摩天嶺砲臺占領之圖","마천령 포대 점령"],["26","日淸戰爭 威海衛攻擊之圖","위해위 공격"],["27","威海衛敵艦沈沒之圖","위해위 적함 침몰"],["28","牛莊 大勝利之圖","우장 대승리"],["29","牛莊城激戰我大勝利","우장성 격전"],["30","營口砲臺占領之圖","영구 포대 점령"],["31","澎湖島馬公城占領之圖","펑후섬 마궁성 점령"],["32","田庄臺激戰我軍占領","전장대 격전"],["33","奉天府附近戰鬪","봉천부 부근 전투"]]],
+  ["6장", "끝, 그리고 미래기", [["34","日淸未來記 北京陷落淸將降參之圖","미래기 · 북경 함락, 청 장수 항복", true]]],
+];
+const root = document.getElementById("plate-list");
+for (const [n, t, plates] of CH) {
+  const sec = document.createElement("div");
+  sec.className = "chapter";
+  sec.innerHTML = `<header><span class="n">${n}</span><h3>${t}</h3></header><div class="plates"></div>`;
+  const grid = sec.querySelector(".plates");
+  for (const [no, ttl, ko, mark] of plates) {
+    const f = document.createElement("figure");
+    f.className = "plate" + (mark ? " mark" : "");
+    f.innerHTML = `<img src="img/p${no}.jpg" alt="판 ${+no} ${ttl}" loading="lazy" width="720" height="364"><figcaption><span class="no">판 ${+no}</span><span class="ttl">${ttl}</span><span class="ko">${ko}</span></figcaption>`;
+    grid.appendChild(f);
+  }
+  root.appendChild(sec);
+}
+
+// 페이지 안 플레이어 — 언어 카드를 누르면 위 틀의 Drive 파일을 바꾼다 (JS가 없으면 카드 링크로 Drive 새 창)
+const stage = document.getElementById("stage");
+const cards = [...document.querySelectorAll(".video")];
+cards.forEach((card) => card.addEventListener("click", (e) => {
+  e.preventDefault();
+  const lang = card.querySelector(".lang").textContent;
+  cards.forEach((c) => c.classList.toggle("on", c === card));
+  stage.innerHTML = `<iframe src="https://drive.google.com/file/d/${card.dataset.drive}/preview" title="${lang} 영상" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+  document.getElementById("stage-title").textContent = `${lang} · ${card.querySelector(".play").textContent.replace("▶", "").trim()}`;
+  document.getElementById("stage-open").href = card.href;
+  stage.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+}));
+</script>
+</body>
+</html>
